@@ -10,14 +10,15 @@ startButton.addEventListener("click", startCountdown);
 // ITERATION 2: Start Countdown
 function startCountdown() {
   console.log("startCountdown called!");
+  startButton.disabled = true;
 
   const countDown = setInterval(() => {
     remainingTime--;
     let timeDisplay = document.getElementById("time");
     timeDisplay.textContent = remainingTime;
 
-    if (remainingTime == 0) {
-      clearTimeout(countDown);
+    if (remainingTime === 0) {
+      clearInterval(countDown);
       showToast();
     }
   }, 1000);
