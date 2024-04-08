@@ -31,6 +31,10 @@ function showToast() {
   let toastCard = document.getElementById("toast");
   toastCard.classList.add("show");
 
+  const countDown = setTimeout(() => {
+    toastCard.classList.remove("show");
+  }, 3000);
+
   // BONUS: ITERATION 4: TOAST CLOSE BUTTON
 
   // Your code goes here ...
